@@ -72,7 +72,7 @@ public class TimeLastUtil extends CountDownTimer {
     }
 
     /**
-     *  倒计时调用
+     *  结束时调用
      */
     @SuppressLint("NewApi")
     @Override
