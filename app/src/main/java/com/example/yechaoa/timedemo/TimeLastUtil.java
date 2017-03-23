@@ -39,6 +39,7 @@ public class TimeLastUtil extends CountDownTimer {
      *  根据设置的间隔时间循环调用
      * @param millisUntilFinished
      */
+    private int length;
     @Override
     public void onTick(long millisUntilFinished) {
         if (type == 1) {
@@ -65,8 +66,13 @@ public class TimeLastUtil extends CountDownTimer {
             btn.setText(millisUntilFinished / 1000 + "s后重新获取");
             // 获取按钮的文字
             Spannable span = new SpannableString(btn.getText().toString());
+            if(millisUntilFinished / 1000>9){
+                length=2;
+            }else{
+                length=1;
+            }
             // 将倒计时时间显示为红色
-            span.setSpan(new ForegroundColorSpan(Color.RED), 0, 2, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+            span.setSpan(new ForegroundColorSpan(Color.RED), 0, length, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
             btn.setText(span);
         }
     }
