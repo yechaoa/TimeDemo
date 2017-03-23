@@ -72,7 +72,7 @@ public class TimeLastUtil extends CountDownTimer {
                 length=1;
             }
             // 将倒计时时间显示为红色
-            span.setSpan(new ForegroundColorSpan(Color.RED), 0, length, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+            span.setSpan(new ForegroundColorSpan(Color.RED), 0, length , Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
             btn.setText(span);
         }
     }
